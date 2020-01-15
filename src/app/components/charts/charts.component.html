@@ -1,0 +1,56 @@
+<div>
+  <!-- <button (click)="onTestBtn('14 - 25', '14-25')">Test Emitter 14-25</button> -->
+  <!-- <button (click)="onTestBtn('25 - 35', '25-35')">Test Emitter 25-35</button> -->
+  <!-- <button (click)="onTestBtn('35 - 45', '35-45')">Test Emitter 35-45</button> -->
+  <!-- <button (click)="onTestBtn('45 - 60', '45-60')">Test Emitter 45-60</button> -->
+  <!-- <button (click)="onTestBtn('60 and above', '60+')">Test Emitter 60+</button> -->
+  <canvas baseChart
+          [chartType]="chartType"
+          [labels]="chartLabels"
+          [data]="chartData"
+          >
+  </canvas>
+  <div class="stats">
+    <div class="stat">
+      <div class="header">
+        <p>Total Pop.</p>
+      </div>
+
+      <div class="body"> <h4>{{ totalPopulation }}</h4> </div>
+    </div>
+
+    <div class="stat">
+      <div class="header">
+        <p> Pop. under 35</p>
+      </div>
+
+      <div class="body">
+        <h4> {{ under35 || 0 }}</h4>
+        <span class="percent">%</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="header">
+        <p>Pop. between 35 and 60</p>
+      </div>
+
+      <div class="body">
+        <h4>{{ between35and60 || 0 }}</h4>
+        <span class="percent">%</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="header">
+        <p>Pop. above 60</p>
+      </div>
+
+      <div class="body">
+        <h4>{{ above60 || 0 }}</h4>
+        <span class="percent">%</span>
+      </div>
+    </div>
+
+  </div>
+</div>
